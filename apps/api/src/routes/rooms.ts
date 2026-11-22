@@ -144,8 +144,8 @@ const DEMO_ROOM_ID = 'r3023023-3023-3023-3023-302330233023';
   });
 
   // Categories
-  const cats = DEFAULT_CATEGORIES.map((cName) => ({
-    id: crypto.randomUUID(),
+  const cats = DEFAULT_CATEGORIES.map((cName, idx) => ({
+    id: `cat-demo-${idx + 1}`,
     roomId: DEMO_ROOM_ID,
     name: cName,
     isDefault: true,

@@ -28,6 +28,18 @@ app.use('*', cors({
   allowHeaders: ['Content-Type', 'Authorization'],
 }));
 
+// Sync Cloudflare Worker bindings to process.env if present
+app.use('*', async (c, next) => {
+  if (c.env) {
+    for (const [key, val] of Object.entries(c.env)) {
+      if (typeof val === 'string') {
+        process.env[key] = val;
+      }
+    }
+  }
+  await next();
+});
+
 // Mount API routes
 app.route('/api/auth', auth);
 app.route('/api/rooms', rooms);

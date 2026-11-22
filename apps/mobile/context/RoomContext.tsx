@@ -89,7 +89,7 @@ interface RoomContextType {
 }
 
 const RoomContext = createContext<RoomContextType | undefined>(undefined);
-const API_URL = 'http://192.168.113.107:8787';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://pg-expense-manager-api.luqman-gohil-pro.workers.dev';
 
 export function RoomProvider({ children }: { children: React.ReactNode }) {
   const { user, token } = useAuth();

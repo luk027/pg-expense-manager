@@ -19,7 +19,7 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://api-staging.pgexpense.app"
+        "EXPO_PUBLIC_API_URL": "https://pg-expense-manager-api.luqman-gohil-pro.workers.dev"
       }
     },
     "production": {
@@ -29,7 +29,7 @@
         "buildType": "app-bundle"
       },
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://api.pgexpense.app"
+        "EXPO_PUBLIC_API_URL": "https://pg-expense-manager-api.luqman-gohil-pro.workers.dev"
       }
     }
   },

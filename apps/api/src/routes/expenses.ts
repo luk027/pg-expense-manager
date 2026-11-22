@@ -176,8 +176,8 @@ const DEMO_MEMBERS = [RAHUL_ID, AMAN_ID, KUNAL_ID, SAMEER_ID];
     };
     expensesStore.set(exp.id, fullExpense);
 
-    const shares = calculateEqualPaiseShares(exp.amountPaise, DEMO_MEMBERS).map((s) => ({
-      id: crypto.randomUUID(),
+    const shares = calculateEqualPaiseShares(exp.amountPaise, DEMO_MEMBERS).map((s, sIdx) => ({
+      id: `share-${exp.id}-${sIdx + 1}`,
       expenseId: exp.id,
       userId: s.userId,
       sharePaise: s.sharePaise,

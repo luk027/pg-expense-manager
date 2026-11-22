@@ -40,7 +40,7 @@ const safeRemoveItem = async (key: string) => {
 };
 
 // Automatically detect host IP or use local default
-const API_URL = 'http://192.168.113.107:8787';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://pg-expense-manager-api.luqman-gohil-pro.workers.dev';
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);

@@ -4,15 +4,12 @@ import * as schema from './schema';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const connectionString = process.env.DATABASE_URL;
-
-let dbInstance: ReturnType<typeof drizzle<typeof schema>> | null = null;
-
-export function getDb() {
+export function getDb(customUrl?: string) {
   if (dbInstance) {
     return dbInstance;
   }
 
+  const connectionString = customUrl || process.env.DATABASE_URL;
   if (connectionString) {
     const client = postgres(connectionString, {
       max: 10,

@@ -44,7 +44,7 @@ interface WaterServiceContextType {
 }
 
 const WaterServiceContext = createContext<WaterServiceContextType | undefined>(undefined);
-const API_URL = 'http://192.168.113.107:8787';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://pg-expense-manager-api.luqman-gohil-pro.workers.dev';
 
 const DEMO_ROOM_ID = 'r3023023-3023-3023-3023-302330233023';
 const RAHUL_ID = 'u1111111-1111-1111-1111-111111111111';
