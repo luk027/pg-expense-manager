@@ -4,6 +4,8 @@ import * as schema from './schema';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
+let dbInstance: ReturnType<typeof drizzle<typeof schema>> | null = null;
+
 export function getDb(customUrl?: string) {
   if (dbInstance) {
     return dbInstance;
