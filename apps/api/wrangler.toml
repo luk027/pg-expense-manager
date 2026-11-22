@@ -1,0 +1,19 @@
+name = "pg-expense-manager-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ENVIRONMENT = "development"
+
+[env.staging]
+name = "pg-expense-manager-api-staging"
+vars = { ENVIRONMENT = "staging" }
+
+[env.production]
+name = "pg-expense-manager-api-prod"
+vars = { ENVIRONMENT = "production" }
+
+# Cloudflare Cron Triggers: Automated settlement & reminder runs (9 AM UTC)
+[triggers]
+crons = ["0 9 * * *"]
