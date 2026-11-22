@@ -2,6 +2,7 @@
   "expo": {
     "name": "PG Expense Manager",
     "slug": "pg-expense-manager",
+    "owner": "luqman-pros-team",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -30,6 +31,11 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "15dd7e1a-bd43-4d39-94a8-79171de39d6f"
+      }
+    }
   }
 }
