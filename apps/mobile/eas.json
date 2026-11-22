@@ -18,6 +18,9 @@
       "android": {
         "buildType": "apk"
       },
+      "ios": {
+        "simulator": true
+      },
       "env": {
         "EXPO_PUBLIC_API_URL": "https://pg-expense-manager-api.luqman-gohil-pro.workers.dev"
       }

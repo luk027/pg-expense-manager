@@ -14,9 +14,11 @@
       "backgroundColor": "#F7F8FA"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.luk027.pgexpensemanager"
     },
     "android": {
+      "package": "com.luk027.pgexpensemanager",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F7F8FA"
